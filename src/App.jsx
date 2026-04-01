@@ -7,27 +7,27 @@ const faq = [
     answer: "A JavaScript library for building user interfaces",
   },
   {
-    id: 2,
+    id: 3,
     question: "What is JSX?",
     answer: "A syntax extension that lets you write HTML inside JavaScript",
   },
   {
-    id: 3,
+    id: 4,
     question: "What are props?",
     answer: "Inputs passed from parent to child components",
   },
   {
-    id: 4,
+    id: 5,
     question: "What is state?",
     answer: "A built-in object used to store dynamic data in a component",
   },
   {
-    id: 5,
+    id: 6,
     question: "What is useEffect?",
     answer: "A hook used to handle side effects in functional components",
   },
   {
-    id: 6,
+    id: 2,
     question: "What is a component?",
     answer: "Reusable building block of a React application",
   },
