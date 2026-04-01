@@ -1,10 +1,14 @@
 import { useState } from "react";
-
 const faq = [
   {
     id: 1,
     question: "What is React?",
     answer: "A JavaScript library for building user interfaces",
+  },
+  {
+    id: 2,
+    question: "What is a component?",
+    answer: "Reusable building block of a React application",
   },
   {
     id: 3,
@@ -25,11 +29,6 @@ const faq = [
     id: 6,
     question: "What is useEffect?",
     answer: "A hook used to handle side effects in functional components",
-  },
-  {
-    id: 2,
-    question: "What is a component?",
-    answer: "Reusable building block of a React application",
   },
 ];
 function App() {
