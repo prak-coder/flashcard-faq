@@ -33,9 +33,15 @@ const faq = [
 ];
 function App() {
   return (
-    <div className="flex flex-row h-full">
-      <FlashCards />
-    </div>
+    <>
+      <div className="flex flex-row h-full gap-1">
+        <FlashCards />
+      </div>
+      <div>
+        <ShowPassword />
+        <ShowPasswordTimer />
+      </div>
+    </>
   );
 }
 
@@ -58,6 +64,47 @@ function FlashCards() {
           {selectedId !== faq.id ? faq.question : faq.answer}
         </p>
       ))}
+    </>
+  );
+}
+
+function ShowPassword() {
+  const [ShowPassword, setShowPassword] = useState(false);
+  function handleClick() {
+    setShowPassword(!ShowPassword);
+  }
+
+  return (
+    <div className="flex flex-col">
+      <div>
+        <label className="mr-1 ">Enter Password</label>
+        <input
+          type={ShowPassword ? "text" : "password"}
+          className="mr-1 border rounded-full px-1"
+        />
+      </div>
+      <div className="ml-30">
+        <input type="checkbox" name="" id="" onClick={handleClick} />
+        <label>show password</label>
+      </div>
+    </div>
+  );
+}
+
+function ShowPasswordTimer() {
+  const [ShowPasswordTimer, setShowPasswordTimer] = useState(false);
+  function handleClickTimer() {
+    setShowPasswordTimer(true);
+    setTimeout(() => setShowPasswordTimer(false), 200);
+  }
+  return (
+    <>
+      <label className="mr-1 ">Enter Password</label>
+      <input
+        type={ShowPasswordTimer ? "text" : "password"}
+        className="mr-1 border rounded-full px-1"
+      />
+      <span onClick={handleClickTimer}>👁</span>
     </>
   );
 }
